@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CITACIÓN OFICIAL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Emoji de sobre con el texto debajo -->
+    <div class="envelope-container" id="envelope-container">
+        <div class="envelope" onclick="toggleCard()">💌</div>
+        <p class="open-text">¡ÁBREME!</p>
+    </div>
+
+    <!-- Hoja rosa con el contenido de la citación -->
+    <div class="card" style="display: none;" id="card">
+        <div class="message">
+            <h1>CITACIÓN OFICIAL</h1>
+            <p>Sr. Jean Pierre Folatre Tapia,</p>
+            <p>Se le notifica oficialmente que ha sido seleccionado como el único y exclusivo candidato para ocupar el cargo de San Valentín 2025 de la suscrita, Andreina del Valle Bartolozzi Placeres.</p>
+            <p>📆 Fecha: 14 de febrero de 2025</p>
+            <p>🕒 Hora: 10:00 PM hora España / 6:00 PM hora Chile</p>
+            <p>📍 Ubicación: Tribunal del Amor (Videollamada privada)</p>
+            <h4>📌 REQUISITOS PARA LA ACEPTACIÓN:</h4>
+            <p>✅ Aceptar sin objeciones.</p>
+            <p>✅ Asistir con disposición al romance.</p>
+            <p>✅ Comprometerse a una velada llena de amor.</p>
+        </div>
+        <div class="options">
+            <h2>ACCIÓN REQUERIDA</h2>
+            <form>
+                <label><input type="radio" name="option" onclick="selectOption('Acepto con una sonrisa y el corazón derretido')"> Acepto con una sonrisa y el corazón derretido😍</label><br>
+                <label><input type="radio" name="option" onclick="selectOption('Acepto porque sería un error judicial no hacerlo')"> Acepto porque sería un error judicial no hacerlo👨‍⚖️</label><br>
+                <label><input type="radio" name="option" onclick="selectOption('Acepto sin derecho a apelación')"> Acepto sin derecho a apelación🫡</label><br>
+            </form>
+        </div>
+        <!-- Asegúrate de que este botón esté presente en tu HTML -->
+        <button id="accept-btn" style="display:none;" onclick="showTerms()">❤️¡Claro que acepto!❤️</button>
+        <!-- Elemento para mostrar la opción seleccionada -->
+        <div id="result"></div>
+
+    </div>
+
+    <!-- Popup de términos y condiciones -->
+    <div id="terms-popup" class="popup" style="display: none;">
+        
+        <div class="terms-slider">
+            <h2 class="terms">TERMINOS Y CONDICIONES</h2>
+            <p><strong>POR CUANTO</strong> la parte citante, Andreina del Valle Bartolozzi Placeres, en adelante “La Convocante”, ha resuelto invitar formalmente a la parte citada, Jean Pierre Folatre Tapia, en adelante “El Convocado”, a una cita de carácter romántico en modalidad a distancia, se establecen los siguientes términos y condiciones:</p>
+
+            <p><strong>PRIMERO: ACEPTACIÓN Y CARÁCTER IRREVOCABLE</strong><br>
+            La sola notificación de esta citación genera aceptación tácita por parte de El Convocado, quien no podrá retractarse ni delegar su participación en tercero alguno.</p>
+
+            <p><strong>SEGUNDO: OBLIGACIÓN DE PARTICIPACIÓN Y PUNTUALIDAD</strong><br>
+            El Convocado se compromete a asistir en la fecha y horario acordados, debiendo demostrar diligencia, entusiasmo y predisposición positiva en todas las actividades programadas. La cita no podrá ser reprogramada salvo eventos de fuerza mayor. Cualquier incomparecencia injustificada será sancionada con la imposición de gestos románticos adicionales, a definir unilateralmente por La Convocante.</p>
+
+            <p><strong>TERCERO: SELECCIÓN DE ACTIVIDADES Y MARIDAJE</strong><br>
+            Las actividades y maridaje han sido previamente elegidos por La Convocante. El Convocado debe elegir entre las opciones propuestas. El cumplimiento de esta selección es obligatorio.</p>
+
+            <p><strong>CUARTO: NORMAS DE COMPETENCIA Y ESPÍRITU DEPORTIVO</strong><br>
+            Ambas partes deberán respetar los resultados de actividades lúdicas y competitivas. El perdedor compensará al ganador con una prueba de afecto a definir por este último.</p>
+
+            <p><strong>QUINTO: CONFIDENCIALIDAD Y PRESUNCIÓN AUTORIZADA</strong><br>
+            Se autoriza la divulgación de contenido visual con fines de presunción romántica, siempre que sea aprobado por ambas partes y mantenga el espíritu del evento. Está prohibida cualquier divulgación que atente contra la dignidad o imagen del evento.</p>
+
+            <p><strong>SEXTO: CÓDIGO DE CONDUCTA Y ROMANTICISMO OBLIGATORIO</strong><br>
+            Ambas partes se comprometen a manifestar cariño durante el evento, estando prohibidas actitudes que impliquen desinterés o falta de entusiasmo.</p>
+
+            <p><strong>SEPTIMO: CLÁUSULA DE DERRETIMIENTO</strong><br>
+            El Convocado acepta contribuir activamente al derretimiento del corazón de La Convocante.</p>
+
+            <p><strong>OCTAVO: LEGISLACIÓN APLICABLE Y RESOLUCIÓN DE CONTROVERSIAS</strong><br>
+            Cualquier disputa será resuelta conforme a los principios de amor, compromiso y buena fe, bajo la jurisdicción del foro romántico.</p>
+
+            <p><strong>ACEPTACIÓN EXPRESA:</strong><br>
+            La revisión del documento equivale a aceptación automática e incondicional de todas sus cláusulas.</p>
+        </div>
+        <button onclick="acceptTerms()">Al final de leer todo😮💨, acepto💘</button>
+        <button onclick="acceptAll()">Sí a todo💘</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

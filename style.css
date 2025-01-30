@@ -1,0 +1,239 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background: #ffe6f2; /* Fondo suave para la página */
+    margin: 0;
+    padding: 0;
+}
+h2 {
+    text-align: center; /* Centra el título 'ACCIÓN REQUERIDA' */
+    font-size: 22px;
+    color: #e60000; /* Rojo para el título */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.terms {
+    text-align: center; /* Centra el título 'ACCIÓN REQUERIDA' */
+    font-size: 22px;
+    color: #ffffff; /* Rojo para el título */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Estilo para el emoji */
+.envelope {
+    font-size: 300px; /* Ajusta el tamaño del emoji */
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Estilo para el contenedor del sobre */
+.envelope-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    height: 90vh; /* Esto asegura que el contenedor ocupe todo el alto de la ventana */
+}
+
+/* Estilo para el texto de abrirme */
+.open-text {
+    text-align: center; /* Este cambio asegura que el párrafo "¡ÁBREME!" esté centrado */
+    font-size: 36px;
+    font-weight: bold;
+    color: #ff66b2; /* Color rosa fuerte */
+    margin-top: 20px;
+}
+
+
+/* Estilo para la carta */
+.card {
+    display: block; /* Aseguramos que la carta se vea */
+    background-color: #ffccff; /* Fondo rosa suave */
+    width: 80%; /* Ajustamos el tamaño */
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Estilo para los títulos dentro de la carta */
+h1 {
+    font-size: 28px;
+    color: #e60000; /* Rojo para el título */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+h4 {
+    font-size: 22px;
+    color: #e60000; /* Rojo para el título */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Estilo para los párrafos */
+p {
+    text-align: left; /* Alineación a la izquierda */
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Estilo para las opciones */
+.options {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.options form {
+    margin-left: 20px; /* Alinea las opciones hacia la izquierda */
+}
+
+.options label {
+    font-size: 18px;
+}
+/* Contenedor del popup */
+#terms-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Ancho más grande */
+    max-width: 480px;
+    background: #f54291; /* Fondo rosa oscuro */
+    padding: 15px;
+    border-radius: 15px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 80vh; /* Altura un poco mayor */
+    overflow: hidden;
+}
+
+/* Contenido general en el popup */
+/* Personalización de la barra de desplazamiento */
+#terms-popup .terms-slider {
+    overflow-y: scroll;
+    width: 95%;
+    max-height: 350px; /* Altura del slider */
+    background-color: #ff1491; /* Fondo del slider */
+    padding: 10px;
+    border-radius: 15px;
+}
+
+/* Personaliza la barra de desplazamiento */
+#terms-popup .terms-slider::-webkit-scrollbar {
+    width: 16px; /* Ancho de la barra */
+}
+
+#terms-popup .terms-slider::-webkit-scrollbar-thumb {
+    background-color: #ff1491; /* Color de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+#terms-popup .terms-slider::-webkit-scrollbar-track {
+    background-color: #ffe6f2; /* Fondo de la pista del scrollbar */
+    border-radius: 10px;
+}
+
+
+/* Botones de acción (para el popup y el índice) */
+#terms-popup button,
+#accept-btn {
+    background-color: #fb6db9; /* Rosa oscuro */
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Efecto al pasar el ratón */
+#terms-popup button:hover,
+#accept-btn:hover {
+    background-color: #ff69b1; /* Rosa claro */
+}
+
+/* Botón oculto que se muestra después de seleccionar una opción */
+#accept-btn {
+    background-color: #f54291; /* Rosa fuerte */
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    margin-top: 20px;
+    display: none; /* Se mantiene oculto hasta que se selecciona una opción */
+    transition: background-color 0.3s ease;
+    text-align: center; /* Centrado horizontal */
+    margin-left: auto;
+    margin-right: auto;
+    display: block; /* Centra el botón horizontalmente */
+}
+
+#accept-btn:hover {
+    background-color: #d4337d; /* Rosa oscuro al pasar el mouse */
+}
+
+/* Estilo común para el botón de continuar */
+.continue-btn {
+    background-color: #ff1491; /* Rosa oscuro */
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    transition: background-color 0.3s ease;
+}
+
+.continue-btn:hover {
+    background-color: #d4337d; /* Rosa más oscuro al pasar el mouse */
+}
+
+
+/* Centrar el contenedor del contenido */
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Esto asegura que el contenedor ocupe todo el alto de la ventana */
+    text-align: center;
+}
+
+/* Estilo para la imagen */
+.image {
+    max-width: 40%; /* Ajusta el tamaño de la imagen */
+    margin-bottom: 15px; /* Espacio debajo de la imagen */
+}
+
+.gif {
+    max-width: 70%; /* Ajusta el tamaño de la imagen */
+    margin-bottom: 15px; /* Espacio debajo de la imagen */
+}
+/* Estilo para el mensaje */
+.message {
+    font-size: 18px; /* Tamaño de la fuente más pequeño */
+    color: #e60000; /* Color rojo */
+    font-weight: bold;
+    margin-top: 10px; /* Espacio en la parte superior */
+}
